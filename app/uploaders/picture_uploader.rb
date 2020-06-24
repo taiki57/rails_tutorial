@@ -14,7 +14,8 @@ class PictureUploader < CarrierWave::Uploader::Base
   def extension_whitelist
     %w(jpg jpeg gif png)
   end
-endclass PictureUploader < CarrierWave::Uploader::Base
+end
+class PictureUploader < CarrierWave::Uploader::Base
   include CarrierWave::MiniMagick
   process resize_to_limit: [400, 400]
 
